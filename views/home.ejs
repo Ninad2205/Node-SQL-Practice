@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .redirect {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(0, 208, 255);
+            transition: background-color 0.5s ease;
+            cursor: pointer;
+            height: 50px;
+            width: 250px;
+            border-radius: 5px;
+            margin-top: 10px;
+            border: 1px solid black;
+            font-size: 30px;
+
+        }
+
+        .redirect:hover {
+            background-color: rgb(0, 157, 229);
+        }
+
+        .btncontainer {
+            display: flex;
+            justify-content: center;
+
+        }
+        h2{
+            color: rgb(255, 0, 144);
+            font-size: 60px;
+            margin-top:150px;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <h2>The total number of users are : <%= count  %></h2>
+    <form action="http://localhost:3000/showUsers">
+        <div class="btncontainer">
+            <button class="redirect">See Users!</button>
+        </div>
+    </form>
+</body>
+</html>
